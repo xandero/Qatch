@@ -8,7 +8,27 @@
 </head>
 <body>
 
-<%= yield %>
+<div id="container">
 
+  <%= yield %>
+
+</div>
+
+<header class="cf">
+  <a href="#" id="navicon" class="closed">Qatch &#9776;</a>
+</header>
+  
+<nav id="main-nav">
+  <% if @current_user.present? %>
+    <a href="/" data-user-id='<%= @current_user.id %>'><div>Home</div></a>
+    <a href="/profiles" data-user-id='<%= @current_user.id %>'><div>Browse Profiles</div></a>
+    <a href="/users/<%= @current_user.id %>" data-user-id='<%= @current_user.id %>'><div>Settings</div></a>
+    <a href="/matches" data-user-id='<%= @current_user.id %>'><div>My Matches</div></a>
+    <a href="/" data-user-id='<%= @current_user.id %>'><div>Logout</div></a>
+  <% else %>
+    <a href="/login" data-user-id=''><div>Login</div></a>
+    <a href="/users/new" data-user-id=''><div>Sign Up</div></a>
+  <% end %>
+</nav>
 </body>
 </html>
