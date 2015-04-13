@@ -9,15 +9,13 @@
   <!-- BOOTSTRAP -->
   <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
   <!-- FAVICON -->
-  <link rel="shortcut icon" href="http://www.favicon-generator.org/favicon-generator/htdocs/favicons/2015-03-05/c966a74c4464637da59dfd4f7e1398b3.ico.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://faviconist.com/icons/f700c2d98656e7301e77f1391190bc23/favicon.ico" type="image/x-icon" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
 <div id="container">
-
-  <%= yield %>
 
   <header class="cf">
     <a href="#" id="navicon" class="closed">Qatch &#9776;</a>
@@ -35,6 +33,8 @@
       <a href="/users/new" data-user-id=''><div>Sign Up</div></a>
     <% end %>
   </nav>
+
+  <%= yield %>
 
 </div>
 </body>
