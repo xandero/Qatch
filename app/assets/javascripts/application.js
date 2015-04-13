@@ -11,6 +11,13 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap-sprockets
 //= require jquery_ujs
-//= require turbolinks
+//= require lib/underscore
+//= require lib/backbone
+//= require_tree ./lib
+//= require_tree ./models
+//= require_tree ./collections
+//= require_tree ./views
+//= require_tree ./router
 //= require_tree .
