@@ -21,7 +21,7 @@
       </div>
       <div class="form-group">
         <%= f.label :question, "Question", :title => 'Enter the question for your match.' %>
-        <%= f.number_field :question, :class => "form-control", :required => true, :id => 'question', :title => 'Enter the question for your match.' %>
+        <%= f.text_field :question, :class => "form-control", :required => true, :id => 'question', :title => 'Enter the question for your match.' %>
       </div>
       <div class="form-group">
         <%= f.label :age_min, "Minimum Age", :title => 'Minimum age for matches' %>
@@ -35,6 +35,7 @@
         <%= f.label :distance_max, "Distance", :title => 'Maximum search distance' %>
         <%= f.number_field :distance_max, :class => "form-control", :required => true, :title => 'Maximum search distance' %>
       </div>
+      <%= f.submit "Update Profile", :class => "btn btn-success", :id => "profile-submit" %>
     </div>
   </div>
 <% end %>
