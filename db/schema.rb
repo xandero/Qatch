@@ -58,5 +58,4 @@ ActiveRecord::Schema.define(version: 20150413002907) do
     t.integer  "distance_max"
     t.string   "sexual_preference"
   end
-
 end

@@ -1,0 +1,40 @@
+<%= form_for @user do |f| %>
+
+  <div class="row">
+    <div class="col-md-4">
+    <h4>Personal Details</h4>
+      <div class="form-group">
+        <%= f.label :name, "Name" %>
+        <%= f.text_field :name,  :class => "form-control", :disabled => "true" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :email, "Email", :title => 'Please enter the email address where we can contact you for important alerts and notifications.' %>
+        <%= f.text_field :email, :class => "form-control", :title => 'Please enter the email address where we can contact you for important alerts and notifications.' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :dob, "Date of birth", :title => 'Please enter your date of birth.' %>
+        <%= f.date_field :dob, :class => "form-control", :required => true, :autofocus => true, :title => 'Please enter your date of birth.' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :gender, :title => 'Please select your gender.' %>
+        <%= f.select :gender, [['Male','Male'],['Female','Female']], :class => "form-control", :required => true, :include_blank => true %>
+      </div>
+      <div class="form-group">
+        <%= f.label :question, "Question", :title => 'Enter the question for your match.' %>
+        <%= f.number_field :question, :class => "form-control", :required => true, :id => 'question', :title => 'Enter the question for your match.' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :age_min, "Minimum Age", :title => 'Minimum age for matches' %>
+        <%= f.number_field :age_min, :class => "form-control", :required => true, :title => 'Minimum age for matches' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :age_max, "Maximum Age", :title => 'Maximum age for matches' %>
+        <%= f.number_field :age_max, :class => "form-control", :required => true, :title => 'Maximum age for matches' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :distance_max, "Distance", :title => 'Maximum search distance' %>
+        <%= f.number_field :distance_max, :class => "form-control", :required => true, :title => 'Maximum search distance' %>
+      </div>
+    </div>
+  </div>
+<% end %>
