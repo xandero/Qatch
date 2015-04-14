@@ -2,6 +2,9 @@ class SessionController < ApplicationController
 
   before_action :check_if_logged_in, :only => [:index]
 
+  def new
+  end
+  
   def create
     @user = User.find_by :name => params[:name] 
     if @user.present? && @user.authenticate(params[:password])
